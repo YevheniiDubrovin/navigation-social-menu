@@ -40,6 +40,10 @@
     display: none;
 }
 
+.fa-xmark {
+    font-size: 35px ;
+}
+
 .toggle_class ul {
     position: relative;
     display: flex;

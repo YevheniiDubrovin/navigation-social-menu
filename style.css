@@ -1,0 +1,123 @@
+
+.btn_phone {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #35C837;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn_phone::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #35a137;
+    animation: pulse 1.3s ease infinite;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    } to {
+        transform: scale(2);
+        opacity: 0;
+    }
+    
+}
+.toggle_class {
+    display: none;
+}
+
+.toggle_class ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    flex-direction: column;
+
+}
+
+.toggle_class li {
+    display: flex;
+    list-style: none;
+    font-size: 37px;
+    padding-top: 20px;
+    transition: ease-in .2s;
+}
+
+.toggle_class li a {
+    background: #fff;
+    border-radius: 50%;
+    color: #808080;
+    line-height: 35px;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.black-bg {
+    background-color: rgba(0, 0, 0, .7);
+    transition: ease-in 0.2s;
+  }
+  
+
+.toggle_class .fa-phone {
+    color: #35a137;
+}
+.toggle_class .fa-facebook {
+    color: #1877F2;
+}
+.toggle_class .fa-facebook-messenger {
+    color: #03A0FF;
+}
+.toggle_class li:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.btn_phone.active ~ .toggle_class {
+    /* width: 220px;
+    height: 80px;
+    background: #fff;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, .3);
+    border-radius: 10px; */
+    position: absolute;
+    bottom: 50px;
+    left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(-100px);
+    transition-delay: 0s, 0.5s, 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+/* 
+.btn_phone.active ~ .toggle_class::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    left: calc(50% - 70px);
+    bottom: -4px;
+    transform: rotate(45deg);
+} */

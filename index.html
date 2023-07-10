@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d4536b16bb.js" crossorigin="anonymous" defer></script>
+    <title>Call Button</title>
+</head>
+<body>
+    <div class="fixed_phone">
+    <div class="btn_phone">
+        <i class="fa-solid fa-message"></i>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="toggle_class">
+        <ul>
+            <li><a href="#"><i class="fa fa-phone"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+<script>
+    function addClassToBtn() {
+  const btn_phone = document.querySelector('.btn_phone');
+  btn_phone.classList.toggle('active');
+
+  const body = document.querySelector('body');
+  body.classList.toggle('black-bg');
+
+  const messageIcon = document.querySelector('.fa-message');
+  const xmarkIcon = document.querySelector('.fa-xmark');
+
+  if (btn_phone.classList.contains('active')) {
+    messageIcon.style.display = 'none';
+    xmarkIcon.style.display = 'block';
+  } else {
+    messageIcon.style.display = 'block';
+    xmarkIcon.style.display = 'none';
+  }
+}
+
+const btn_phone = document.querySelector('.btn_phone');
+btn_phone.addEventListener('click', addClassToBtn);
+
+document.addEventListener('click', function(event) {
+  const target = event.target;
+  const activeBlock = document.querySelector('.active');
+
+  if (!activeBlock.contains(target)) {
+    activeBlock.classList.remove('active');
+    document.body.classList.remove('black-bg');
+    const messageIcon = document.querySelector('.fa-message');
+    const xmarkIcon = document.querySelector('.fa-xmark');
+    messageIcon.style.display = 'block';
+    xmarkIcon.style.display = 'none';
+  }
+});
+
+
+
+
+</script>
+
+</html>

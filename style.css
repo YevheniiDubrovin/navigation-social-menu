@@ -16,6 +16,10 @@
     cursor: pointer;
 }
 
+.fa-xmark {
+    font-size: 35px ;
+}
+
 .btn_phone::after {
     content: '';
     position: absolute;
@@ -38,10 +42,6 @@
 }
 .toggle_class {
     display: none;
-}
-
-.fa-xmark {
-    font-size: 35px ;
 }
 
 .toggle_class ul {
@@ -125,3 +125,24 @@
     bottom: -4px;
     transform: rotate(45deg);
 } */
+
+@media (max-width: 768px) {
+    .btn_phone {
+        bottom: 30px;
+        left: 20px;
+        width: 60px;
+        height: 60px;
+
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        } to {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+        
+    }
+}

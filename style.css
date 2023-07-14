@@ -78,16 +78,22 @@
     transition: ease-in 0.2s;
   }
   
-
-.toggle_class .fa-phone {
+.toggle_class .fa-instagram {
+    color: #FC17BE;
+}
+.toggle_class .fa-whatsapp {
     color: #35a137;
 }
 .toggle_class .fa-facebook {
     color: #1877F2;
 }
-.toggle_class .fa-facebook-messenger {
-    color: #03A0FF;
+.toggle_class .fa-viber {
+    color: #7857D9;
 }
+.toggle_class .fa-telegram {
+    color: #25A5E3 ;
+}
+
 .toggle_class li:hover {
     transform: scale(1.1);
 }

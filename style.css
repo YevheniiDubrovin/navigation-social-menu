@@ -1,6 +1,5 @@
-/*навигация*/
-
-
+ 
+/*навигационное меню*/
 
 
 .btn_phone {
@@ -21,8 +20,14 @@
     z-index: 1000;
 }
 
+
 .fa-xmark {
     font-size: 35px ;
+    fill: #fff;
+}
+
+.fa-message {
+    fill: #fff;
 }
 
 .btn_phone::after {
@@ -84,19 +89,19 @@
   }
   
 .toggle_class .fa-instagram {
-    color: #FC17BE;
+    fill: #FC17BE;
 }
 .toggle_class .fa-whatsapp {
-    color: #35a137;
+    fill: #35a137;
 }
 .toggle_class .fa-facebook {
-    color: #1877F2;
+    fill: #1877F2;
 }
 .toggle_class .fa-viber {
-    color: #7857D9;
+    fill: #7857D9;
 }
 .toggle_class .fa-telegram {
-    color: #25A5E3 ;
+    fill: #25A5E3 ;
 }
 
 .toggle_class li:hover {
@@ -123,30 +128,33 @@
 }
 
 @media (max-width: 768px) {
-.btn_phone {
-    bottom: 30px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
+    .btn_phone {
+        bottom: 30px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
 
     }
     
-.btn_phone {
-    font-size: 24px;
-}
+    .breadcrumb {
+        margin-top: 180px;
+    }
+    
+    .btn_phone {
+        font-size: 24px;
+    }
 
-.fa-xmark {
-    font-size: 30px;
-}
-.toggle_class li {
+    .fa-xmark {
+        font-size: 30px;
+    }
+    .toggle_class li {
+        font-size: 32px;
+    }
 
-    font-size: 32px;
-}
-
-.toggle_class li a {
-    width: 50px;
-    height: 50px;
-}
+    .toggle_class li a {
+        width: 50px;
+        height: 50px;
+    }
 
     @keyframes pulse {
         from {
@@ -159,9 +167,7 @@
         
     }
 
-.btn_phone.active ~ .toggle_class {
-
-    left: 20px;
-}
-    
+    .btn_phone.active ~ .toggle_class {
+        left: 20px;
+    }
 }
